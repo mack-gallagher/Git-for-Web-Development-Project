@@ -7,6 +7,9 @@ Now that you are all set up, it's time to learn a little more about the tools of
   Git is a software tool that allows multiple developers working on different computers to contribute edits to the same software project without stepping on each others' toes. This is enabled by providing a standard interface for all of the developers to work on their own local versions of a project, and periodically push their edits, or decide to incorporate others' edits, into a central version of the project, which Git automatically organizes so it actually makes sense and works.
 
 2. What is the difference between Git and GitHub?
+
+  Git is an open source version control tool that can be implemented in multiple ways. GitHub is a for-profit company that provides popular cloud hosting for developers to use Git over their website. You do not need to use GitHub to use Git, but every time you use GitHub, you are using Git.
+
 3. Why do we create a branch? 
 4. What is the purpose of a Pull Request?
 5. What is the command you can use to switch between branches? For example you are working on FIRSTNAME-LASTNAME branch and you want to switch back to main.

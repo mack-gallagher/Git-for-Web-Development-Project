@@ -4,7 +4,7 @@ Now that you are all set up, it's time to learn a little more about the tools of
 
 1. What is Git?
 
-  Git is a software tool that allows multiple developers working on different computers to contribute edits to the same software project without stepping on each others' toes. This is enabled by providing a standard interface for all of the developers to work on their own local versions of a project, and periodically push their edits, or decide to incorporate others' edits, into a central version of the project, which Git automatically organizes so it actually makes sense and works.
+  Git is a software tool that allows multiple developers working on different computers to contribute edits to the same software project without stepping on each others' toes. This is enabled by providing a standard interface for all of the developers to work on their own local versions of a project, and periodically smoosh their edits, or decide to incorporate others' edits, into a central version of the project, which Git automatically organizes so it actually makes sense and works.
 
 2. What is the difference between Git and GitHub?
 
@@ -12,7 +12,7 @@ Now that you are all set up, it's time to learn a little more about the tools of
 
 3. Why do we create a branch?
 
-  If you are working on some changes to Aspect A of a project, and at the same time working on some other changes to Aspect B, and you're not sure whether you're going to end up wanting to keep the changes to Aspect A, you'll be a lot better off if, when it comes time to push the changes you made to Aspect B with the main project, you *don't* also have to push incomplete changes to Aspect A. This is why it would come in handy to be making your speculative changes to Aspect A of the project in a separate branch. Branches in general help keep different streams of editing separate from one another, so code can be merged cleanly and all-at-once.
+  If you are working on some changes to Aspect A of a project, and at the same time working on some other changes to Aspect B, and you're not sure whether you're going to end up wanting to keep the changes to Aspect A, you'll be a lot better off if, when it comes time to push the changes you made to Aspect B, you *don't* also have to push incomplete changes to Aspect A. This is why it would come in handy to be making your speculative changes to Aspect A of the project in a separate branch. Branches in general help keep different streams of editing separate from one another, so code can be merged cleanly and all-at-once.
 
 4. What is the purpose of a Pull Request?
 
@@ -28,7 +28,8 @@ Now that you are all set up, it's time to learn a little more about the tools of
   
 7. What is a merge conflict?
 
+  Merge conflicts happen when you merge two branches with commits that conflict with each other [the commits conflict] and the different edits occur [usually] physically close enough together, that Git can't figure out by itself which to keep. Another example of a merge conflict is if one person deletes a file, and another person edits the same file. On GitHub, all merge conflicts must be resolved before you can merge a pull request.
   
 8. How do you resolve a merge conflict?
 
-
+  In order to resolve a merge conflict you have to tell Git explicitly what is the [version of the confused file] you want to keep. If the merge conflict is caused by competing changes to the same line of a file, and you are using GitHub, you can use GitHub's conflict editor by clicking [Resolve conflicts] under the Pull Requests Tab. Otherwise, you must go home and create a version of the branch with the conflicts resolved, which you can then push to GitHub to replace the original merge attempt. You can do this by trying `git merge <branch>` in your command line, while checked into the other branch you want to merge, searching for `<<<<<<<`, git's marker for conflicts, in the conflicted file,and manually editing, saving, and committing the file to resolve the issue.

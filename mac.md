@@ -12,7 +12,7 @@ Now that you are all set up, it's time to learn a little more about the tools of
 
 3. Why do we create a branch?
 
-  If you are working ons some changes to Aspect A of a project, and at the same time working on some other changes to Aspect B, and you're not sure whether you're going to end up wanting to keep the changes to Aspect A, you'll be a lot better off if, when it comes time to push the changes you made to Aspect B with the main project, you *don't* also have to push incomplete changes to Aspect A. This is why it would come in handy to be making your speculative changes to Aspect A of the project in a separate branch. Branches in general help keep different streams of editing separate from one another, so code can be merged cleanly and all-at-once.
+  If you are working on some changes to Aspect A of a project, and at the same time working on some other changes to Aspect B, and you're not sure whether you're going to end up wanting to keep the changes to Aspect A, you'll be a lot better off if, when it comes time to push the changes you made to Aspect B with the main project, you *don't* also have to push incomplete changes to Aspect A. This is why it would come in handy to be making your speculative changes to Aspect A of the project in a separate branch. Branches in general help keep different streams of editing separate from one another, so code can be merged cleanly and all-at-once.
 
 4. What is the purpose of a Pull Request?
 
@@ -24,8 +24,11 @@ Now that you are all set up, it's time to learn a little more about the tools of
   
 6. Explain the difference between `git fetch`, `git merge` and `git pull`. What does each command do?
 
+  `git fetch <remote>` downloads changes from a remote branch but does not integrate them into the branch you are currently working on. `git merge <branch>` merges changes from the specified branch into your current HEAD, ie the branch you [are currently working on]/[have checked out]/[are switched into]. `git pull <remote><branch>` does a `git fetch <remote>` *and then immediately* a `git merge <branch> of what you just downloaded.
   
 7. What is a merge conflict?
+
+  
 8. How do you resolve a merge conflict?
 
 
